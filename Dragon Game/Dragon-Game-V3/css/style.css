@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.not-visible{
+    visibility: hidden;
+}
+
+.gameContainer{
+    background-image: url(../img/bg1.png);
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameOver{
+    position: relative;
+    top:70px;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#highScoreCount{
+    font-size: 25px;
+    color: #54212f;
+    font-weight: bold;
+    position: absolute;
+    left: 45px;
+    top: 20px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+#scoreCount{
+    font-size: 25px;
+    color: #420012;
+    font-weight: bold;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    border: 2px solid black;
+    padding: 10px;
+    font-family: sans-serif;
+    border-radius: 10px;
+}
+
+#dino{
+    background-image: url(../img/dino.png);
+    background-size: cover;
+    width: 218px;
+    height: 112px;
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+}
+
+#fire{
+    background-image: url(../img/fire.png);
+    background-size: cover;
+    width: 175px;
+    height: 106px;
+    position: absolute;
+    bottom: 10px;
+    left: 10vw;
+}
+
+#powerup{
+    background-image: url(../img/powerup.png);
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 10px;
+    left: 10vw;
+}
+
+#obstacle{
+    background-image: url(../img/dragon.png);
+    background-size: cover;
+    width: 164px;
+    height: 112px;    
+    position: absolute;
+    bottom: 0;
+    left: 90vw;
+}
+
+.animateDino{
+    animation: animateDino 0.6s linear;
+}
+
+.animateObstacle{
+    animation: animateObstacle 5s linear infinite;
+}
+
+.animateFire{
+    animation: animateFire 0.8s linear;
+}
+
+.animatePowerup{
+    animation: animatePowerup 2s linear;
+}
+
+@keyframes animateDino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes animateObstacle{
+    0%{
+        left: 110vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+@keyframes animateFire{
+    100%{
+        left: 90vw;
+    }
+}
+
+@keyframes animatePowerup{
+    0%{
+        left: 110vw;
+    }
+}

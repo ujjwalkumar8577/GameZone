@@ -1,0 +1,113 @@
+@font-face {
+    font-family: FirstJob;
+    src: url(FirstJob-X8rP.ttf);
+  }
+
+* {
+    border-radius: 10px;
+    font-family: FirstJob;
+}
+
+body {
+    background-color: rgb(40, 58, 70);
+    /* background-image: url(background.png); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+hr {
+    border-top: 2px solid red;
+}
+
+h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.block {
+    margin-top: 30px;
+}
+
+canvas {
+    margin-top:30px;
+    display: block;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%;
+    height: 90vmin; */
+}
+
+.left {
+    position: absolute;
+    background-color: rgb(29, 34, 32);
+    top: 30px;
+    left: 10px;
+    width: 18%;
+    height: 80vmin;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.right {
+    position: absolute;
+    background-color: rgb(29, 34, 32);
+    top: 30px;
+    right: 10px;
+    width: 18%;
+    height: 80vmin;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+#restart {
+    visibility: hidden;
+    background-color: white;
+    margin: 20px;
+    padding: 10px;
+    color:red;
+    cursor: pointer;
+}
+
+#restart:hover {
+    color:green;
+}
+
+.animateRestart {
+    animation: restartAnimation 2s linear;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.not-visible {
+    visibility: hidden;
+}
+
+@keyframes restartAnimation {
+    0% {
+        border: 2px solid red;
+    }
+
+    30% {
+        border: 4px solid red;
+    }
+
+    50% {
+        border: 4px dashed red;
+    }
+
+    80% {
+        border: 2px dashed red;
+    }
+
+    100% {
+        border: none;
+    }
+}

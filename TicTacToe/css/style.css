@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding:0;
+    border-radius: 8px;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.not-visible{
+    visibility: hidden;
+}
+
+.gameContainer{
+    background-image: url(../img/bg3.png);
+    background-size: 100vw 100vh;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    /* cursor: url(../img/pencil.png), auto; */
+}
+
+#restart{
+    visibility: hidden;
+    margin: auto;
+    margin-top: 10px;
+    width: 50%;
+    background-color: yellow;
+    border: 2px solid black;
+    font-size: 24px;
+    align-content: center;
+    text-align: center;
+}
+
+#restart:hover{
+    background-color: rgb(255, 246, 113);
+    height: 1.3em;
+    width: 55%;
+}
+
+.board{
+    position: absolute;
+    border: 5px solid greenyellow;
+    top: 50px;
+    right: 100px;
+    padding: 1%;
+    background-color: red;
+    width: 65vh;
+    height: 70vh;
+}
+
+.row{
+    margin: auto;
+    padding-left: 15px;
+    background-color:greenyellow;
+    width: 96%;
+    height: 30%;
+}
+
+.block{
+    /* background-image: url(../img/circle.png); */
+    background-size: cover;
+    display: inline-block;
+    margin: 1%;
+    background-color: yellow;
+    width: 29%;
+    height: 90%;
+}
+
+.block:hover{
+    background-color: honeydew;
+    box-shadow: chartreuse;
+}
+
+#title{
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-size: 50px;
+    width: 50vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    text-align: center;
+}
+
+#gameStatus{
+    position: relative;
+    top: 200px;
+    left: 100px;
+    font-size: 50px;
+    width: 50vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.animateGameStatus{
+    animation: animateGameStatus 5s linear;
+}
+
+@keyframes animateGameStatus{
+    0%{
+        left: 0vw;
+    }
+    20%{
+        left: 100px;
+    }
+    40%{
+        color: red;
+        font-size: 1.2em;
+    }
+    60%{
+        colour: black;
+        font-size: 1.0em;
+    }
+    80%{
+        colour: red;
+    }
+    100%{
+        colour: black;
+    }
+}
